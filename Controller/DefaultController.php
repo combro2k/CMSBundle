@@ -29,7 +29,7 @@ class DefaultController extends Controller
         $this->client = new Curl();
 
         $request = new Request(RequestInterface::METHOD_GET);
-        $request->fromUrl('http://www.google.nl/');
+        $request->fromUrl('http://eu.battle.net/api/wow/guild/turalyon/Non%20Omnis%20Moriar?fields=members');
         $request->addHeaders(array());
         $request->addHeader('Content-Type: application/json');
 
