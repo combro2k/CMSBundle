@@ -23,7 +23,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return array(
-            'guild' => json_decode($this->getGuild('Turalyon', 'Non Omnis Moriar')->getContent()),
+            'guild' => $this->getGuild('Turalyon', 'Non Omnis Moriar'),
         );
     }
 
