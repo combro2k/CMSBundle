@@ -23,7 +23,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $html = $this->renderView('CMSBundle:Default:index.html.twig', array(
-            'some'  => 'blaat'
+            'guild'  => $this->getGuild('Turalyon', 'Non Omnis Moriar')
         ));
 
         return new Response(
@@ -34,13 +34,7 @@ class DefaultController extends Controller
                 'Content-Disposition'   => 'attachment; filename="file.pdf"'
             )
         );
-//        return array(
-//            'guild' => array(),
-//            //$this->getGuild('Turalyon', 'Non Omnis Moriar'),
-//        );
     }
-
-
 
     public function getGuild($serverName, $guildName)
     {
