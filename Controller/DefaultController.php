@@ -32,6 +32,7 @@ class DefaultController extends Controller
         $request = new Curl();
         $api = new Client();
         $api->setRequest($request);
+        $api->setRegion('eu', 'en_EN');
 
         return $api->getGuildApi()->getGuild($serverName, $guildName, true);
     }
