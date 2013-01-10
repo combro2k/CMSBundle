@@ -11,9 +11,9 @@ We have currently {{ guild|length }} registred guild members:<br />
     </tr>
 {% for member in guild.members %}
 <tr>
-    <td>{{ member.name }}</td>
-    <td>{{ member.class }}</td>
-    <td>{{ member.level }}</td>
+    <td>{{ member.character.name }}</td>
+    <td>{{ member.character.class }}</td>
+    <td>{{ member.character.level }}</td>
     <td>{{ member.rank }}</td>
 </tr>
 {% endfor %}
