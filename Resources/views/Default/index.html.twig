@@ -12,7 +12,7 @@ We have currently {{ guild|length }} registred guild members:<br />
     </tr>
 {% for member in guild.members %}
 <tr>
-    <td><img src="http://eu.battle.net/static-render/eu/{{ member.character.thumbnail }}" alt="" title="" /></td>
+    <td>{% if member.character.level > 20 %}<img src="http://eu.battle.net/static-render/eu/{{ member.character.thumbnail }}" alt="" title="" />{% endif %}</td>
     <td>{{ member.character.name }}</td>
     <td>{{ member.character.class }}</td>
     <td>{{ member.character.level }}</td>
