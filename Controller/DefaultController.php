@@ -19,7 +19,9 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
+        echo '<pre>';
         var_dump($this->getCharacter('', ''));
+        echo '</pre>';
         return $this->render('CMSBundle:Default:index.html.twig');
 
     }
