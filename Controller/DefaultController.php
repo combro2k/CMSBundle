@@ -26,7 +26,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return array(
-            'guild' => json_decode($this->getGuild('turalyon', 'Non Omni Moriar')->getContent()),
+            'guild' => json_decode($this->getGuild('Turalyon', 'Non Omnis Moriar')->getContent()),
         );
     }
 
@@ -38,7 +38,8 @@ class DefaultController extends Controller
 
         $url = sprintf(
             'http://eu.battle.net/api/wow/guild/%s/%s?fields=members',
-            $serverName, $guildName
+            str_replace(' ', '%20', $serverName),
+            str_replace(' ', '%20', $guildName)
         );
 
         $request->fromUrl($url);
