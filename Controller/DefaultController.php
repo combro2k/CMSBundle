@@ -30,10 +30,10 @@ class DefaultController extends Controller
 
         $request = new Request(RequestInterface::METHOD_GET);
 
-        $url = urlencode(sprintf(
+        $url = sprintf(
             'http://eu.battle.net/api/wow/guild/%s/%s?fields=members',
             $serverName, $guildName
-        ));
+        );
 
         $request->fromUrl($url);
 
