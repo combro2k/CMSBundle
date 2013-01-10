@@ -22,17 +22,32 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array(
-            'guild' => $this->getGuild('Turalyon', 'Non Omnis Moriar'),
+        $html = $this->renderView('CMSBundle:Default:index.html.twig', array(
+            'some'  => 'blaat'
+        ));
+
+        return new Response(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'attachment; filename="file.pdf"'
+            )
         );
+//        return array(
+//            'guild' => array(),
+//            //$this->getGuild('Turalyon', 'Non Omnis Moriar'),
+//        );
     }
+
+
 
     public function getGuild($serverName, $guildName)
     {
         $request = new Curl();
         $api = new Client();
         $api->setRequest($request);
-        $api->setRegion('eu', 'en_EN');
+        $api->setRegion('eu', 'en_GB');
 
         return $api->getGuildApi()->getGuild($serverName, $guildName, true);
     }
