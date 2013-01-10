@@ -21,8 +21,9 @@ class DefaultController extends Controller
     {
         var_dump($this->getCharacter('', ''));
         return $this->render('CMSBundle:Default:index.html.twig', array('name' => $name));
-    }
 
+    }
+    
     public function getCharacter($server, $character)
     {
         $this->client = new Curl();
