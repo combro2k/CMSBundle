@@ -19,19 +19,24 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        echo '<pre>';
-        var_dump($this->getCharacter('', ''));
-        echo '</pre>';
-        return $this->render('CMSBundle:Default:index.html.twig');
-
+        return array(
+            'guild' => json_decode($this->getGuild('turalyon', 'Non Omni Moriar')->getContent()),
+        );
     }
 
-    public function getCharacter($server, $character)
+    public function getGuild($serverName, $guildName)
     {
         $this->client = new Curl();
 
         $request = new Request(RequestInterface::METHOD_GET);
-        $request->fromUrl('http://eu.battle.net/api/wow/guild/turalyon/Non%20Omnis%20Moriar?fields=members');
+
+        $url = urlencode(sprintf(
+            'http://eu.battle.net/api/wow/guild/%s/%s?fields=members',
+            $serverName, $guildName
+        ));
+
+        $request->fromUrl($url);
+
         $request->addHeaders(array());
         $request->addHeader('Content-Type: application/json');
 
