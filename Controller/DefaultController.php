@@ -17,6 +17,11 @@ class DefaultController extends Controller
      */
     protected $client;
 
+    /**
+     * @return array
+     *
+     * @Template("CMSBundle:Default:index.html.twig")
+     */
     public function indexAction()
     {
         return array(
