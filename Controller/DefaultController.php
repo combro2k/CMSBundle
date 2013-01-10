@@ -3,13 +3,10 @@
 namespace CMS\Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-use Buzz\Client\ClientInterface;
-use Buzz\Client\Curl;
-use Buzz\Message\Request;
-use Buzz\Message\RequestInterface;
-use Buzz\Message\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use WowApi\Client;
+use WowApi\Request\Curl;
+
 
 class DefaultController extends Controller
 {
@@ -32,24 +29,10 @@ class DefaultController extends Controller
 
     public function getGuild($serverName, $guildName)
     {
-        $this->client = new Curl();
+        $request = new Curl();
+        $api = new Client();
+        $api->setRequest($request);
 
-        $request = new Request(RequestInterface::METHOD_GET);
-
-        $url = sprintf(
-            'http://eu.battle.net/api/wow/guild/%s/%s?fields=members',
-            str_replace(' ', '%20', $serverName),
-            str_replace(' ', '%20', $guildName)
-        );
-
-        $request->fromUrl($url);
-
-        $request->addHeaders(array());
-        $request->addHeader('Content-Type: application/json');
-
-        $response = new Response();
-        $this->client->send($request, $response);
-
-        return $response;
+        return $api->getGuildApi()->getGuild($serverName, $guildName, true);
     }
 }

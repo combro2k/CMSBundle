@@ -14,7 +14,8 @@
     "require": {
         "php": ">=5.3.2",
         "kriswallsmith/buzz": "dev-master",
-        "sensio/framework-extra-bundle": "*"
+        "sensio/framework-extra-bundle": "*",
+        "dancannon/php-wowapi": "dev-master"
     },
     "require-dev": {
         "sensio/framework-extra-bundle": "*",
