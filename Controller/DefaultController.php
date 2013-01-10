@@ -17,13 +17,13 @@ class DefaultController extends Controller
      */
     protected $client;
 
-    public function indexAction($name)
+    public function indexAction()
     {
         var_dump($this->getCharacter('', ''));
-        return $this->render('CMSBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('CMSBundle:Default:index.html.twig');
 
     }
-    
+
     public function getCharacter($server, $character)
     {
         $this->client = new Curl();
