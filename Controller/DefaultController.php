@@ -9,7 +9,7 @@ use Buzz\Client\Curl;
 use Buzz\Message\Request;
 use Buzz\Message\RequestInterface;
 use Buzz\Message\Response;
-use Doctrine\Tests\Common\Annotations\Fixtures\Annotation\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends Controller
 {
