@@ -1,7 +1,7 @@
 {
-    "name": "combro2k/cms-bundle",
+    "name": "combro2k/mordred-cms-bundle",
     "type": "symfony-bundle",
-    "description": "CMS bundle for use with Symfony2",
+    "description": "CMS Bundle for use with Symfony2",
     "keywords": ["cms", "bundle"],
     "homepage": "http://github.com/combro2k/CMSBundle",
     "license": "MIT",
