@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="cms.example.class">CMS\Bundle\Example</parameter>
+        <parameter key="mordred_cms.example.class">Mordred\Bundle\CMSBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="cms.example" class="%cms.example.class%">
+        <service id="mordred_cms.example" class="%mordred_cms.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>
