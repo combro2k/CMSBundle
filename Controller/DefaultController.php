@@ -23,9 +23,29 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $html = $this->renderView('CMSBundle:Default:index.html.twig', array(
+        return array();
+    }
+
+    /**
+     * @return array
+     *
+     * @Template("CMSBundle:Default:members.html.twig")
+     */
+    public function membersAction()
+    {
+        return array(
             'guild'  => $this->getGuild('Turalyon', 'Non Omnis Moriar')
-        ));
+        );
+    }
+
+    /**
+     * @return array
+     *
+     * @Template("CMSBundle:Default:pdf.html.twig")
+     */
+    public function createPdfAction()
+    {
+        $html = $this->renderView('CMSBundle:Default:pdf.html.twig');
 
         return new Response(
             $this->get('knp_snappy.pdf')->getOutputFromHtml($html),

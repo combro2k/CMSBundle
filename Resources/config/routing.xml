@@ -4,7 +4,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="cms_homepage" pattern="/hello/{name}">
+    <route id="cms_homepage" pattern="/">
         <default key="_controller">CMSBundle:Default:index</default>
+    </route>
+
+    <route id="cms_homepage" pattern="/pdf">
+        <default key="_controller">CMSBundle:Default:pdf</default>
+    </route>
+
+    <route id="cms_homepage" pattern="/members">
+        <default key="_controller">CMSBundle:Default:members</default>
     </route>
 </routes>
