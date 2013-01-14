@@ -26,7 +26,7 @@ class DefaultController extends Controller
      */
     public function pdfAction()
     {
-        $html = $this->renderView('CMSBundle:Default:pdf.html.twig');
+        $html = $this->renderView('MordredCMSBundle:Default:pdf.html.twig');
 
         return new Response(
             $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
