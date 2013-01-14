@@ -16,4 +16,13 @@ class DefaultController extends Controller
     {
         return array('name' => $name);
     }
+
+    /**
+     * @Route("/pdf")
+     * @Template()
+     */
+    public function pdfAction()
+    {
+        return array();
+    }
 }
