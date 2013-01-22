@@ -16,7 +16,8 @@
         "kriswallsmith/buzz": "dev-master",
         "sensio/framework-extra-bundle": "*",
         "dancannon/php-wowapi": "dev-master",
-        "knplabs/knp-snappy-bundle": "dev-master"
+        "knplabs/knp-snappy-bundle": "dev-master",
+	"friendsofsymfony/user-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/framework-extra-bundle": "*",
