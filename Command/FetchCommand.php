@@ -14,6 +14,13 @@ class FetchCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
+        $this
+                ->setName('CMSBundle:Fetch')
+                ->setDescription('Fetch all wow data from the API');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
         $request = new Curl();
         $api = new Client();
         $api->setRequest($request);
@@ -23,15 +30,6 @@ class FetchCommand extends ContainerAwareCommand
 
         var_dump($data);
 
-        $this
-                ->setName('CMSBundle:Fetch')
-                ->setDescription('Fetch all wow data from the API');
-    }
-
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
-
-
-        $output->writeln($text);
+        $output->writeln('');
     }
 }
