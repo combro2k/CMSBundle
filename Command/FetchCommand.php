@@ -1,6 +1,6 @@
 <?php
 
-namespace Mordred\Bundle\CMSBundle\Command;
+namespace NoM\Bundle\CMSBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;

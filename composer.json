@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2"
+        "php": ">=5.3.2",
+	"dancannon/php-wowapi": "dev-master"
     },
     "require-dev": {
         "sensio/framework-extra-bundle": "*",
