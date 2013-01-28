@@ -1,0 +1,7 @@
+parameters:
+#    no_mcms.example.class: NoM\Bundle\CMSBundle\Example
+
+services:
+#    no_mcms.example:
+#        class: %no_mcms.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

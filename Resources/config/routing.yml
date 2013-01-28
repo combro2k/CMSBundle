@@ -1,0 +1,4 @@
+NoMCMSBundle_default:
+    resource: "@NoMCMSBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /

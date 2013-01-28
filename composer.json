@@ -1,5 +1,5 @@
 {
-    "name": "combro2k/mordred-cms-bundle",
+    "name": "combro2k/nom-cms-bundle",
     "type": "symfony-bundle",
     "description": "CMS Bundle for use with Symfony2",
     "keywords": ["cms", "bundle"],
@@ -24,8 +24,8 @@
         "symfony/framework-bundle": ">=2.1,<2.2-dev"
     },
     "autoload": {
-        "psr-0": { "Mordred\\Bundle\\CMSBundle\\": "" }
+        "psr-0": { "NoM\\Bundle\\CMSBundle": "" }
     },
     "minimum-stability": "dev",
-    "target-dir": "Mordred/Bundle/CMSBundle"
+    "target-dir": "NoM/Bundle/CMSBundle"
 }
