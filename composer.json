@@ -22,5 +22,6 @@
     "autoload": {
         "psr-0": { "NoM\\Bundle\\CMSBundle": "" }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "target-dir": "NoM/Bundle/CMSBundle"
 }
